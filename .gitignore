@@ -4,3 +4,8 @@ node_modules/
 .env.*
 .DS_Store
 *.log
+
+# ไฟล์สคริปต์เกม (local-only ไม่ควรขึ้น GitHub)
+config.luau
+potassium_farmlog.luau
+
