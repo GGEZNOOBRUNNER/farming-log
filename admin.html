@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080B14">
+  <meta name="robots" content="noindex">
+  <title>ROLLINSHOP — Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    .login-wrap{max-width:420px;margin:48px auto;padding:28px}
+    .admin-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px;flex-wrap:wrap}
+    .admin-title{font:700 22px var(--display);letter-spacing:.4px}
+    .admin-title span{color:var(--gold)}
+    .danger-btn{border:1px solid #6b2737;background:#2a1220;color:#ff8fa3;border-radius:10px;padding:7px 12px;font:600 13px var(--body);cursor:pointer}
+    .danger-btn:hover{background:#3a1626;color:#ffb3c2}
+    .ok-btn{border:1px solid #1d5a37;background:#0f2a1c;color:#7dedaa;border-radius:10px;padding:7px 12px;font:600 13px var(--body);cursor:pointer}
+    .ok-btn:hover{background:#153a27}
+    .admin-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
+    .admin-card{border:1px solid var(--line);border-radius:14px;background:linear-gradient(145deg,#121a2b,#0e1524);padding:14px;display:flex;flex-direction:column;gap:10px}
+    .admin-card .row{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+    .admin-card .name{font:700 16px var(--display);color:var(--text)}
+    .admin-card .sub{font:400 12.5px var(--body);color:var(--muted)}
+    .btn-row{display:flex;gap:6px;flex-wrap:wrap}
+    .btn-row select{min-height:32px;border:1px solid #263349;background:#080e19;color:var(--text);border-radius:8px;padding:4px 8px;font:500 12.5px var(--body)}
+    .sect{margin:26px 0 10px;font:700 15px var(--display);color:var(--gold);letter-spacing:.6px}
+    .sect small{color:var(--muted);font-weight:400;margin-left:8px}
+    .history-item{display:flex;align-items:center;gap:10px;padding:8px 10px;border:1px solid var(--line);border-radius:10px;margin-bottom:6px;background:#0d1421}
+    .history-item .h-main{flex:1;min-width:0}
+    .history-item .h-title{font:600 13.5px var(--body)}
+    .history-item .h-sub{font:400 12px var(--body);color:var(--muted)}
+    .online-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--green);margin-right:6px;box-shadow:0 0 8px var(--green)}
+    .offline-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#5b6780;margin-right:6px}
+  </style>
+</head>
+<body>
+
+<div class="shell">
+  <header class="topbar" id="topbar">
+    <div class="brand">
+      <div class="brand-mark">R</div>
+      <div>
+        <div class="brand-name">ROLLINSHOP</div>
+        <div class="brand-sub">ADMIN / BACK OFFICE</div>
+      </div>
+    </div>
+    <nav class="navlinks" aria-label="Main navigation">
+      <a class="navbtn" href="index.html" style="text-decoration:none">← กลับหน้าเว็บ</a>
+    </nav>
+    <div class="top-actions">
+      <button class="login-btn" id="logoutBtn" style="display:none">LOGOUT</button>
+    </div>
+  </header>
+
+  <main id="app">
+
+    <!-- ============ LOGIN ============ -->
+    <section id="loginPage">
+      <div class="panel login-wrap">
+        <div class="admin-title">🔐 <span>แอดมิน</span> เข้าสู่ระบบ</div>
+        <p class="muted" style="margin:8px 0 18px">ใส่รหัสแอดมินเพื่อจัดการงานฟาร์ม (รหัสตั้งไว้ที่ ADMIN_KEY ใน Vercel)</p>
+        <label class="muted" for="keyInput">รหัสแอดมิน</label>
+        <input class="field" id="keyInput" type="password" placeholder="••••••••" style="margin:6px 0 14px">
+        <button class="primary-btn" id="loginSubmit" style="width:100%">เข้าสู่ระบบ →</button>
+        <div id="loginMsg" class="muted" style="margin-top:12px;min-height:18px"></div>
+      </div>
+    </section>
+
+    <!-- ============ ADMIN PANEL ============ -->
+    <section id="adminPage" class="hidden">
+      <div class="page-head">
+        <div>
+          <div class="eyebrow"><span class="dot pulse"></span> BACK OFFICE / MANAGEMENT</div>
+          <h1 class="page-title">หลังบ้าน <span class="shine">จัดการงาน</span></h1>
+          <p class="page-desc">ลบงาน แก้สถานะ ลบบัญชี และจัดการประวัติการฟาร์มทั้งหมด</p>
+        </div>
+        <div class="live-indicator"><span class="dot pulse"></span> <span id="adminLiveLabel">ADMIN</span></div>
+      </div>
+
+      <div id="adminMsg" style="min-height:20px;margin-bottom:8px"></div>
+
+      <div class="toolbar">
+        <div class="search-wrap"><span class="search-icon">⌕</span><input class="field" id="adminSearch" placeholder="ค้นหางาน / ลูกค้า..."></div>
+        <button class="primary-btn" id="refreshBtn">↻ รีเฟรช</button>
+      </div>
+
+      <div class="sect">งานฟาร์ม <small id="orderCount"></small></div>
+      <div class="admin-grid" id="orderList"></div>
+
+      <div class="sect">บัญชีในเกม (farming log) <small id="accountCount"></small></div>
+      <div class="admin-grid" id="accountList"></div>
+    </section>
+
+  </main>
+</div>
+
+<div id="toastHost" aria-live="polite"></div>
+<div id="modalHost"></div>
+<div id="historyModal" class="hidden" style="position:fixed;inset:0;background:rgba(4,7,14,.78);z-index:60;display:none;align-items:center;justify-content:center;padding:20px">
+  <div class="panel" style="width:min(680px,100%);max-height:82vh;overflow:auto;padding:20px">
+    <div class="admin-head">
+      <div class="admin-title" id="historyTitle">ประวัติ</div>
+      <button class="danger-btn" id="historyClose">✕ ปิด</button>
+    </div>
+    <div id="historyList"></div>
+  </div>
+</div>
+
+<script src="assets/admin.js"></script>
+</body>
+</html>

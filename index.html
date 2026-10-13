@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080B14">
+  <title>ROLLINSHOP — Farming Log</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<div class="shell">
+
+  <header class="topbar" id="topbar">
+    <div class="brand">
+      <div class="brand-mark">R</div>
+      <div>
+        <div class="brand-name">ROLLINSHOP</div>
+        <div class="brand-sub">FARMING_SERVICE / LOG CENTER</div>
+      </div>
+    </div>
+    <nav class="navlinks" aria-label="Main navigation">
+      <button class="navbtn active" data-page="dashboard">Dashboard</button>
+      <button class="navbtn" data-page="shop">Shop</button>
+      <button class="navbtn" data-page="support">Support</button>
+    </nav>
+    <div class="top-actions">
+      <button class="language" id="langToggle" aria-label="Switch language">TH / EN</button>
+      <button class="login-btn" id="loginBtn">LOGIN ↗</button>
+    </div>
+  </header>
+
+  <main id="app">
+
+    <!-- ============ DASHBOARD ============ -->
+    <section id="dashboardPage">
+
+      <div class="page-head">
+        <div>
+          <div class="eyebrow"><span class="dot pulse"></span> FARMING SERVICE / OVERVIEW</div>
+          <h1 class="page-title">ฟาร์มของคุณ <span class="shine">Live Dashboard</span></h1>
+          <p class="page-desc">ติดตามสถานะบัญชี ความคืบหน้า และประวัติการฟาร์มได้จากหน้าจอเดียว</p>
+        </div>
+        <div class="live-indicator"><span class="dot pulse"></span> <span id="liveLabel">LIVE MOCK DATA</span></div>
+      </div>
+
+      <section class="game-picker" id="gamePicker" aria-label="เลือกเกมที่ต้องการดู">
+        <div class="picker-top">
+          <div>
+            <div class="picker-kicker"><span class="dot pulse"></span> ROLLINSHOP / GAME SELECTOR</div>
+            <h2 class="picker-title">เลือกเกมที่ต้องการ <span id="pickTitleWord">FARM</span></h2>
+            <p class="picker-desc">เลือกเกมเพื่อเปิดดูรายการฟาร์ม สถานะบัญชี และรายงานความคืบหน้าของเกมนั้น ๆ</p>
+          </div>
+          <div class="search-wrap picker-search"><span class="search-icon">⌕</span><input class="field" id="gameSearch" placeholder="Search games..." aria-label="ค้นหาเกม"></div>
+        </div>
+        <div class="game-cards" id="gameCards"></div>
+        <div class="picker-bottom">
+          <span class="secure-note"><span>●</span> PRIVATE ACCOUNT DATA · USERNAMES ARE MASKED</span>
+          <span>เลือกเกมเพื่อดูรายการที่เกี่ยวข้อง</span>
+        </div>
+      </section>
+
+      <div id="dashboardWorkspace" class="hidden">
+        <div class="workspace-topline">
+          <div class="selected-game-label"><span class="mini-game-mark">◈</span><span id="selectedGameName">Anime Zero</span><span class="mini-chip status-done">GAME LOG</span></div>
+          <button class="change-game-btn" id="changeGame">← เปลี่ยนเกม</button>
+        </div>
+
+        <div class="stats-grid" id="statsGrid"></div>
+
+        <div class="toolbar">
+          <div class="search-wrap"><span class="search-icon">⌕</span><input class="field" id="accountSearch" placeholder="ค้นหางาน / ลูกค้า..." aria-label="ค้นหางาน"></div>
+          <select class="field select-field" id="statusFilter" aria-label="กรองสถานะ"><option value="all">ทุกสถานะ</option><option value="FARMING">Farming</option><option value="PENDING">Pending</option><option value="DONE">Completed</option><option value="CANCEL">Cancel</option></select>
+          <div class="view-switch"><button id="gridView" class="active" aria-label="Grid view">▦</button><button id="listView" aria-label="List view">☷</button></div>
+          <div class="updated">อัปเดตล่าสุด <span class="mono" id="lastUpdated">—</span></div>
+        </div>
+
+        <div id="accountsList"></div>
+        <div class="footer-note"><span>ROLLINSHOP / FARMING_SERVICE</span><span id="dataNote">MOCK DATA · AUTO REFRESH 15S</span></div>
+      </div>
+
+    </section>
+
+    <!-- ============ DETAIL (ตัวละคร/วัสดุ) ============ -->
+    <section id="detailPage" class="hidden">
+      <div class="page-head">
+        <div>
+          <div class="eyebrow">BATTLE MONITOR / CHARACTER LOG</div>
+          <h1 class="page-title" id="detailTitle">Farm <span class="shine">Session Detail</span></h1>
+          <p class="page-desc">ข้อมูลรอบฟาร์ม สถานะในเกม ตัวละคร และวัสดุที่เกี่ยวข้อง</p>
+        </div>
+        <button class="change-game-btn" id="backFromDetail">← Dashboard</button>
+      </div>
+      <div class="detail-body" id="detailBody"></div>
+    </section>
+
+    <!-- ============ SHOP ============ -->
+    <section id="shopPage" class="hidden">
+      <div class="page-head">
+        <div>
+          <div class="eyebrow">SERVICE CATALOG / MOCK</div>
+          <h1 class="page-title">เลือกบริการ <span class="shine">Shop</span></h1>
+          <p class="page-desc">ตัวอย่างหน้าแคตตาล็อกสำหรับบริการฟาร์ม — ข้อมูลจำลองสำหรับออกแบบ UI</p>
+        </div>
+      </div>
+      <div class="accounts-grid">
+        <article class="panel" style="padding:20px">
+          <div class="eyebrow">STARTER</div>
+          <h2 class="display" style="margin:12px 0 4px">ฟาร์มทุกวัน 1 วัน</h2>
+          <p class="muted">Anime Zero · ติดตามผลผ่านหน้า log</p>
+          <div class="currency-value gold" style="margin:14px 0">CUSTOM</div>
+          <button class="primary-btn" data-page="support">สอบถามบริการ →</button>
+        </article>
+        <article class="panel" style="padding:20px">
+          <div class="eyebrow">ADVANCED</div>
+          <h2 class="display" style="margin:12px 0 4px">ฟาร์มตามเป้าหมาย</h2>
+          <p class="muted">เลือกเป้าหมายและติดตามสถิติการทำงาน</p>
+          <div class="currency-value cyan" style="margin:14px 0">CUSTOM</div>
+          <button class="primary-btn" data-page="support">สอบถามบริการ →</button>
+        </article>
+        <article class="panel" style="padding:20px">
+          <div class="eyebrow">SUPPORT</div>
+          <h2 class="display" style="margin:12px 0 4px">รายงานและติดตามงาน</h2>
+          <p class="muted">รับรายงานความคืบหน้าและแจ้งปัญหาผ่าน Ticket</p>
+          <div class="currency-value green" style="margin:14px 0">INCLUDED</div>
+          <button class="primary-btn" data-page="support">ไปหน้า Support →</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ SUPPORT ============ -->
+    <section id="supportPage" class="hidden">
+      <div class="page-head">
+        <div>
+          <div class="eyebrow">HELP CENTER / TICKET</div>
+          <h1 class="page-title">ต้องการความช่วยเหลือ <span class="shine">Support</span></h1>
+          <p class="page-desc">หากสถานะไม่อัปเดตหรือพบปัญหา กรุณาส่งรายงานพร้อมรหัสงาน</p>
+        </div>
+      </div>
+      <div class="panel" style="padding:20px;max-width:720px">
+        <label class="muted" for="ticketOrder">รหัสงาน</label>
+        <input class="field" id="ticketOrder" value="AZ-999" style="margin:6px 0 14px">
+        <label class="muted" for="ticketMessage">รายละเอียด</label>
+        <textarea class="field" id="ticketMessage" rows="4" placeholder="อธิบายปัญหาที่พบ..." style="margin:6px 0 14px;resize:vertical"></textarea>
+        <button class="primary-btn" id="sendTicket">ส่งคำขอรายงาน →</button>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<div id="toastHost" aria-live="polite"></div>
+<div id="modalHost"></div>
+
+<!-- URL ของ Firebase Realtime DB (เช่น "https://xxx-default-rtdb.firebaseio.com")
+     ตั้ง Rules .read: true เพื่อให้เว็บอ่านได้ — เว้นว่าง = ใช้ mock.json
+     (การเขียนทำผ่าน Vercel /api/* ซึ่งใช้ secret ใน env ไม่เปิดเผย) -->
+<script>
+  window.FIREBASE_URL = ""; // เช่น "https://your-project-default-rtdb.firebaseio.com"
+</script>
+<script src="assets/app.js"></script>
+</body>
+</html>
+

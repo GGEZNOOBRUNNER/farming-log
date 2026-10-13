@@ -1,0 +1,86 @@
+{
+  "farminglog": {
+    "SIRINTHA49": {
+      "player": "SIRINTHA49",
+      "displayName": "SIRINTHA49",
+      "userId": 0,
+      "level": 103,
+      "placeId": 114574503491412,
+      "jobId": "d6bcf924-fe30-4955-ab2c-3249bb46119a",
+      "ts": 1762000000,
+      "source": "store",
+      "history": {
+        "r1791856463-Story-Hxh": { "runId": "r1791856463-Story-Hxh", "ts": 1791856463, "mode": "Story", "result": "win", "mapName": "Hxh", "waves": 11, "kills": 106, "difficulty": "Nightmare", "character": "sukuna" },
+        "r1791820426-Story-Hxh": { "runId": "r1791820426-Story-Hxh", "ts": 1791820426, "mode": "Story", "result": "lose", "mapName": "Hxh", "waves": 5, "kills": 49, "difficulty": "Nightmare", "character": "sukuna" }
+      },
+      "characters": [
+        { "name": "Nagumo",   "tier": "Zenless",   "trait": "Golden",    "count": 3,  "favorite": true,  "level": 88, "unlocked": true,  "icon": "0" },
+        { "name": "Shanks",   "tier": "Mythic",    "trait": "Fractured", "count": 11, "favorite": true,  "level": 81, "unlocked": true,  "icon": "0" },
+        { "name": "Sukuna",   "tier": "Mythic",    "trait": "Fractured", "count": 15, "favorite": false, "level": 79, "unlocked": true,  "icon": "0" },
+        { "name": "Escanor",  "tier": "Mythic",    "trait": "Scrambled", "count": 6,  "favorite": true,  "level": 74, "unlocked": true,  "icon": "0" },
+        { "name": "Alucard",  "tier": "Arcane",    "trait": "Fractured", "count": 2,  "favorite": false, "level": 66, "unlocked": true,  "icon": "0" },
+        { "name": "Hutao",    "tier": "Arcane",    "trait": "Fractured", "count": 17, "favorite": true,  "level": 71, "unlocked": true,  "icon": "0" },
+        { "name": "Katakuri", "tier": "Arcane",    "trait": "Golden",    "count": 4,  "favorite": false, "level": 63, "unlocked": true,  "icon": "0" },
+        { "name": "Killua",   "tier": "Legendary", "trait": "Scrambled", "count": 9,  "favorite": true,  "level": 58, "unlocked": true,  "icon": "0" },
+        { "name": "Yhwach",   "tier": "Legendary", "trait": "Fractured", "count": 22, "favorite": false, "level": 55, "unlocked": true,  "icon": "0" },
+        { "name": "Ichigo",   "tier": "Legendary", "trait": "Fractured", "count": 30, "favorite": false, "level": 52, "unlocked": true,  "icon": "0" },
+        { "name": "Goku",     "tier": "Epic",      "trait": "—",         "count": 51, "favorite": false, "level": 44, "unlocked": true,  "icon": "0" },
+        { "name": "Juuzou",   "tier": "Common",    "trait": "—",         "count": 88, "favorite": false, "level": 31, "unlocked": false, "icon": "0" }
+      ],
+      "materials": {
+        "Gold Coin": 12480,
+        "Shadow Fragment": 412,
+        "Trait Shard": 96,
+        "Awaken Crystal": 24,
+        "Raid Ticket": 7
+      },
+      "currencies": {
+        "money": 1248000,
+        "gems": 3420,
+        "rolls": 128,
+        "luckySpins": 15,
+        "traitRerolls": 42
+      }
+    },
+    "AZ-FARM-02": {
+      "player": "AZ-FARM-02",
+      "displayName": "Anime Vanguards",
+      "userId": 0,
+      "level": 88,
+      "placeId": 114574503491412,
+      "jobId": "mock-job-02",
+      "ts": 1762000000,
+      "source": "store",
+      "characters": [
+        { "name": "Sukuna",  "tier": "Mythic",    "trait": "Golden",    "count": 7,  "favorite": true,  "level": 72, "unlocked": true, "icon": "0" },
+        { "name": "Goku",    "tier": "Epic",      "trait": "Scrambled", "count": 13, "favorite": false, "level": 48, "unlocked": true, "icon": "0" },
+        { "name": "Killua",  "tier": "Legendary", "trait": "Fractured", "count": 4,  "favorite": false, "level": 57, "unlocked": true, "icon": "0" },
+        { "name": "Hutao",   "tier": "Arcane",    "trait": "Fractured", "count": 9,  "favorite": false, "level": 69, "unlocked": true, "icon": "0" },
+        { "name": "Nagumo",  "tier": "Zenless",   "trait": "Scrambled", "count": 2,  "favorite": true,  "level": 85, "unlocked": true, "icon": "0" }
+      ],
+      "materials": {
+        "Gold Coin": 8320,
+        "Shadow Fragment": 205,
+        "Trait Shard": 44
+      },
+      "currencies": {
+        "money": 832000,
+        "gems": 1180,
+        "rolls": 52,
+        "luckySpins": 6,
+        "traitRerolls": 18
+      }
+    }
+  },
+  "orders": {
+    "AZ-118": { "id": "AZ-118", "customer": "nakopang_", "game": "Anime Zero", "package": "ฟาร์มผู้กล้า 12 ชั่วโมง", "qty": 12, "status": "FARMING", "progress": 48, "price": 1698, "updatedAt": 1762000000 },
+    "AZ-117": { "id": "AZ-117", "customer": "aswd123",   "game": "Anime Zero", "package": "ฟาร์มผู้กล้า 1 วัน",     "qty": 1,  "status": "FARMING", "progress": 93, "price": 998,  "updatedAt": 1762000000 },
+    "AZ-116": { "id": "AZ-116", "customer": "XEng!_",    "game": "Anime Zero", "package": "ฟาร์มผู้กล้า 12 ชั่วโมง", "qty": 12, "status": "PENDING", "progress": 0,  "price": 2078, "updatedAt": 1762000000 },
+    "AZ-115": { "id": "AZ-115", "customer": "pant_",     "game": "Anime Zero", "package": "ฟาร์มผู้กล้า 3 วัน",     "qty": 3,  "status": "DONE",    "progress": 100, "price": 2298, "updatedAt": 1762000000 },
+    "AZ-114": { "id": "AZ-114", "customer": "firstea_",  "game": "Anime Zero", "package": "ฟาร์มผู้กล้า 12 ชั่วโมง", "qty": 12, "status": "DONE",   "progress": 100, "price": 698,  "updatedAt": 1762000000 },
+    "AZ-113": { "id": "AZ-113", "customer": "zetsu_",    "game": "Anime Zero", "package": "ฟาร์มผู้กล้า 2 วัน",     "qty": 2,  "status": "CANCEL",  "progress": 10,  "price": 499,  "updatedAt": 1762000000 },
+    "SL-042": { "id": "SL-042", "customer": "tanjiro_x", "game": "Slayer 2",   "package": "ฟาร์มดาบพิฆาต 1 วัน",   "qty": 1,  "status": "FARMING", "progress": 64, "price": 1290, "updatedAt": 1762000000 },
+    "SL-041": { "id": "SL-041", "customer": "nezuko_9",  "game": "Slayer 2",   "package": "ฟาร์มดาบพิฆาต 12 ชม.",  "qty": 12, "status": "DONE",    "progress": 100, "price": 890,  "updatedAt": 1762000000 },
+    "SL-040": { "id": "SL-040", "customer": "zenitsu_k", "game": "Slayer 2",   "package": "ฟาร์มดาบพิฆาต 3 วัน",   "qty": 3,  "status": "PENDING", "progress": 0,  "price": 2490, "updatedAt": 1762000000 }
+  }
+}
