@@ -1,5 +1,5 @@
 /* ============================================================
-   ROLLINSHOP — History Ingest API (Vercel serverless)
+   Paduk — History Ingest API (Vercel serverless)
    รับประวัติการจบเกม (run) จากสคริปต์ในเกม แล้วเก็บลง Firebase:
      /farminglog/<player>/history/<runId> = { runId, ts, mode, result, ... }
    ประวัติเก็บสูงสุด 60 รายการ (ตัดรายการเก่าทิ้งอัตโนมัติ)

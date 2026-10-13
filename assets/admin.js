@@ -1,5 +1,5 @@
 /* ============================================================
-   ROLLINSHOP — Admin page logic
+   Paduk — Admin page logic
    ใช้ /api/admin (Vercel serverless) — รหัสแอดมินเก็บใน sessionStorage
    ============================================================ */
 "use strict";

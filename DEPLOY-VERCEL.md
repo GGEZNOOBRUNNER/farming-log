@@ -163,7 +163,7 @@ npx vercel --prod # ขึ้น production ได้ลิงก์จริง
 Vercel ให้แก้โดเมนฟรีเป็น `ชื่อที่ต้องการ.vercel.app`:
 
 1. เข้าโปรเจกต์ใน Vercel → **Settings** → **Domains**
-2. แก้ `farming-log-xxxx.vercel.app` เป็น `rollinshop-farming.vercel.app` (ถ้าชื่อว่าง)
+2. แก้ `farming-log-xxxx.vercel.app` เป็น `paduk-farming.vercel.app` (ถ้าชื่อว่าง)
 3. กด **Save**
 
 ถ้าอยากใช้โดเมนของตัวเอง (เช่น `farm.yourdomain.com`) ก็ทำได้

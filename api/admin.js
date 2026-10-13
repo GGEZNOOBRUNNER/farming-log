@@ -1,5 +1,5 @@
 /* ============================================================
-   ROLLINSHOP — Admin API (Vercel serverless)
+   Paduk — Admin API (Vercel serverless)
    หลังบ้านสำหรับแอดมิน: ตรวจรหัส, ลบงาน, แก้สถานะ, ลบบัญชี/ประวัติรอบ
    ข้อมูลทั้งหมดเก็บบน Firebase Realtime DB (ตัวเดียวกับสคริปต์เกม)
 

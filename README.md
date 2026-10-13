@@ -1,7 +1,7 @@
-# 📊 ROLLINSHOP — Farming Log
+# 📊 Paduk — Farming Log
 
 ระบบจดบันทึกการฟาร์ม Anime Zero (All) บน Potassium: อ่านข้อมูลในเกมแบบเรียลไทม์
-แล้ว POST ขึ้น **เว็บบน Vercel** (เก็บลง Firebase Realtime DB) พร้อม **เว็บ dashboard ธีม ROLLINSHOP**
+แล้ว POST ขึ้น **เว็บบน Vercel** (เก็บลง Firebase Realtime DB) พร้อม **เว็บ dashboard ธีม PADUK**
 (การ์ดงานฟาร์ม + หน้าตัวละครไล่สีตาม rarity + ประวัติจบเกม + สถานะออนไลน์ + หน้าหลังบ้าน)
 
 ---
@@ -12,7 +12,7 @@
 farming-log/
 ├── potassium_farmlog.luau   ← สคริปต์หลัก (inject ในเกม)
 ├── config.luau              ← ตั้งค่า (สคริปต์หลักโหลดอันนี้ถ้าวางคู่กัน)
-├── index.html               ← หน้าเว็บ dashboard (ธีม ROLLINSHOP)
+├── index.html               ← หน้าเว็บ dashboard (ธีม PADUK)
 ├── admin.html               ← หน้าหลังบ้าน (เฉพาะแอดมิน — ลบงาน/แก้สถานะ)
 ├── api/                     ← Vercel serverless functions
 │   ├── ingest.js            ← รับข้อมูลบัญชีจากสคริปต์เกม

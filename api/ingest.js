@@ -1,5 +1,5 @@
 /* ============================================================
-   ROLLINSHOP — Ingest API (Vercel serverless)
+   Paduk — Ingest API (Vercel serverless)
    รับข้อมูลบัญชีจากสคริปต์ในเกม แล้วเก็บลง Firebase:
      /farminglog/<player> = { player, displayName, level, ts, characters, materials, currencies }
    สคริปต์ยิงมาทุก 2 นาที — เว็บใช้ค่า ts หา "ออนไลน์" (ส่งภายใน 5 นาทีล่าสุด)
